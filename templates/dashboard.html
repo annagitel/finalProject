@@ -8,23 +8,40 @@
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
       <title>RapidPT</title>
    </head>
-   <body>
+   <body style="background-image: url() ">
+      <div style="background: url(https://www.sas.com/en_us/insights/data-management/cloud-computing/_jcr_content/par/styledcontainer_4612/image.img.jpg/1606385642223.jpg)" class="jumbotron bg-cover text-white">
+         <div class="container py-5 text-center">
+              <h1 class="display-4 font-weight-bold">Rapid API penetration tester</h1>
+              <p class="font-italic mb-2">a quick and easy way to test your cloud API .</p>
+              <a href="https://github.com/annagitel/finalProject" role="button" class="btn btn-primary px-5">Github and Documentation</a>
+          </div>
+      </div>
       <div class="container">
          <div class="row" style="margin-top: 200px">
             <!-- In a row, you can have 12 yehidot mida -->
-            {% for dict in data %}
+            {% for key,value in data.items() %}
             <div class="col-lg-3">
-               <div class="card" style="width: 18rem;">
-                  <img src="pngwing.com.png" class="card-img-top" alt="...">
+               <div class="card text-black border-dark mb-3" style="width: 18rem;">
+                  <img src="https://res.cloudinary.com/dgs1jkg1t/image/upload/v1630351570/passed_jsvcpj.png" class="card-img-top" alt="...">
                   <div class="card-body">
-                     <h5 class="card-title">{{ dict.test_name }}</h5>
+                     <h5 class="card-title">{{ key }}</h5>
                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                   </div>
+
                   <ul class="list-group list-group-flush">
-                     <li class="list-group-item">BRUTEFORCE</li>
-                     <li class="list-group-item">DENIAL OF SERVICE</li>
-                     <li class="list-group-item">JSON INJECTION</li>
-                      <li class="list-group-item">xross site scripting</li>
+                     {% for dict_item in value %}
+                        {% if "failed" == dict_item['resault'] %}
+                           <li class="list-group-item bg-danger">
+                                 {{dict_item['test_name']}}
+                           </li>
+                        {% endif %}
+                        {% if "passed" == dict_item['resault'] %}
+                           <li class="list-group-item bg-success">
+                                 {{dict_item['test_name']}}
+                           </li>
+                        {% endif %}
+
+                     {% endfor %}
                   </ul>
                   <div class="card-body">
                      <li class="list-group-item">msg</li>
@@ -44,5 +61,3 @@
          -->
    </body>
 </html>
-<style>
-</style>

@@ -1,5 +1,49 @@
-[
-   [
+{
+   "bruteforce":[
+      {
+         "test_name":"bruteforce simple",
+         "resault":"failed",
+         "msg":"you suck"
+      },
+      {
+         "test_name":"bruteforce dictionary",
+         "resault":"passed",
+         "msg":"you suck"
+      },
+      {
+         "test_name":"bruteforce random",
+         "resault":"passed",
+         "msg":"you suck"
+      },
+      {
+         "test_name":"blabla",
+         "resault":"failed",
+         "msg":"you suck"
+      }
+   ],
+   "Dos":[
+      {
+         "test_name":"dos simple",
+         "resault":"passed",
+         "msg":"you suck"
+      },
+      {
+         "test_name":"dos spoofed ip",
+         "resault":"passed",
+         "msg":"you suck"
+      },
+      {
+         "test_name":"dos random queries",
+         "resault":"passed",
+         "msg":"you suck"
+      },
+      {
+         "test_name":"dos spoofed ip +random",
+         "resault":"passed",
+         "msg":"you suck"
+      }
+   ],
+   "xss":[
       {
          "test_name":"blabla",
          "resault":"failed",
@@ -21,51 +65,7 @@
          "msg":"you suck"
       }
    ],
-   [
-      {
-         "test_name":"blabla",
-         "resault":"failed",
-         "msg":"you suck"
-      },
-      {
-         "test_name":"blabla",
-         "resault":"failed",
-         "msg":"you suck"
-      },
-      {
-         "test_name":"blabla",
-         "resault":"failed",
-         "msg":"you suck"
-      },
-      {
-         "test_name":"blabla",
-         "resault":"failed",
-         "msg":"you suck"
-      }
-   ],
-   [
-      {
-         "test_name":"blabla",
-         "resault":"failed",
-         "msg":"you suck"
-      },
-      {
-         "test_name":"blabla",
-         "resault":"failed",
-         "msg":"you suck"
-      },
-      {
-         "test_name":"blabla",
-         "resault":"failed",
-         "msg":"you suck"
-      },
-      {
-         "test_name":"blabla",
-         "resault":"failed",
-         "msg":"you suck"
-      }
-   ],
-   [
+   "json":[
       {
          "test_name":"blabla",
          "resault":"failed",
@@ -87,4 +87,4 @@
          "msg":"you suck"
       }
    ]
-]
+}
