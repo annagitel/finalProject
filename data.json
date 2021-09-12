@@ -1,90 +1,75 @@
 {
-   "bruteforce":[
+   "Bruteforce":[
       {
          "test_name":"bruteforce simple",
-         "resault":"failed",
-         "msg":"you suck"
+         "resault":"passed",
+         "msg":""
       },
       {
          "test_name":"bruteforce dictionary",
          "resault":"passed",
-         "msg":"you suck"
+         "msg":""
       },
       {
          "test_name":"bruteforce random",
-         "resault":"passed",
-         "msg":"you suck"
-      },
-      {
-         "test_name":"blabla",
          "resault":"failed",
-         "msg":"you suck"
+         "msg":"Did not block"
       }
    ],
-   "Dos":[
+   "DoS":[
       {
-         "test_name":"dos simple",
+         "test_name":"DoS simple",
          "resault":"passed",
-         "msg":"you suck"
+         "msg":""
       },
       {
-         "test_name":"dos spoofed ip",
+         "test_name":"Dos spoofed ip",
          "resault":"passed",
-         "msg":"you suck"
+         "msg":""
       },
       {
-         "test_name":"dos random queries",
+         "test_name":"DoS random queries",
          "result":"passed",
-         "msg":"you suck"
+         "msg":""
       },
       {
-         "test_name":"dos spoofed ip +random",
+         "test_name":"DoS spoofed ip + random",
          "resault":"passed",
-         "msg":"you suck"
+         "msg":""
       }
    ],
-   "xss":[
+   "XSS":[
       {
-         "test_name":"blabla",
+         "test_name":"simple redirects",
          "resault":"failed",
-         "msg":"you suck"
+         "msg":"redirected!"
       },
       {
-         "test_name":"blabla",
+         "test_name":"write data",
          "resault":"failed",
-         "msg":"you suck"
+         "msg":"changed page data"
       },
       {
-         "test_name":"blabla",
+         "test_name":"delete data",
          "resault":"failed",
-         "msg":"you suck"
-      },
-      {
-         "test_name":"blabla",
-         "resault":"failed",
-         "msg":"you suck"
+         "msg":"data was deleted from page"
       }
    ],
-   "json":[
+   "JSON injection":[
       {
-         "test_name":"blabla",
+         "test_name":"simple string",
          "resault":"failed",
-         "msg":"you suck"
+         "msg":"was not detected"
       },
       {
-         "test_name":"blabla",
-         "resault":"failed",
-         "msg":"you suck"
+         "test_name":"get data",
+         "resault":"passed",
+         "msg":"returned data"
       },
       {
-         "test_name":"blabla",
+         "test_name":"insert data",
          "resault":"failed",
-         "msg":"you suck"
-      },
-      {
-         "test_name":"blabla",
-         "resault":"failed",
-         "msg":"you suck"
+         "msg":"file was changed"
       }
    ]
 }
