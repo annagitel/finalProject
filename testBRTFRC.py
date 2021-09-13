@@ -9,3 +9,19 @@ different login credentials:
 the test will expect for a block
 
 """
+import requests
+
+
+def simple_brtfrc():
+    response = requests.get("http://api.open-notify.org/astros.json")
+    print(response)
+
+
+def dict():
+    response = requests.get("http://api.open-notify.org/astros.json")
+    print(response)
+
+
+def rand():
+    response = requests.get("http://api.open-notify.org/astros.json")
+    print(response)

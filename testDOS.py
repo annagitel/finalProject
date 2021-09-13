@@ -12,6 +12,7 @@ of the API with such attacks
 """
 import random
 import socket
+import requests
 
 
 def genIP():
@@ -32,3 +33,7 @@ def testDOS(spoofIP=False, randomQueries=False):
             query = random.choice(queryList)
 
         # send API query to cluster with given IP and Query
+
+
+response = requests.get("http://api.open-notify.org/astros.json")
+print(response)

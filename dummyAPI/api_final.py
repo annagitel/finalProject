@@ -5,6 +5,9 @@ import sqlite3
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
 
+req_counter = 0
+last_req = ""
+
 
 def dict_factory(cursor, row):
     d = {}
@@ -35,9 +38,15 @@ def page_not_found(e):
 
 
 @app.route('/api/v1/resources/books', methods=['GET'])
-def api_filter():
+def api_filter(req_counter=None):
     query_parameters = request.args
+    if query_parameters == last_req:
+        req_counter = req_counter + 1
+    else:
+        req_counter = 0
 
+    if req_counter > 10:
+        return "<h1>404</h1><p>The resource could not be found.</p>", 404
     id = query_parameters.get('id')
     published = query_parameters.get('published')
     author = query_parameters.get('author')
@@ -66,5 +75,6 @@ def api_filter():
     results = cur.execute(query, to_filter).fetchall()
 
     return jsonify(results)
+
 
 app.run()
